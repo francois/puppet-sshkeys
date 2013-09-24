@@ -14,7 +14,7 @@ Etc.passwd do |pw|
   if key
     Facter.add("sshpubkey_#{user}") do
       setcode do
-        key
+        key.split[1]
       end
     end
   end
